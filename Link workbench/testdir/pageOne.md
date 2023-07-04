@@ -10,7 +10,7 @@ a page with the same filename stem: [[2021-11-11-Milosz]]
 
 Here's a page that has some links.
 
-We have a [[Massive Wiki Roadmap]].
+We have a [[Massive Wiki Manifesto]].
 
 We have [[links that are incipient]].
 
