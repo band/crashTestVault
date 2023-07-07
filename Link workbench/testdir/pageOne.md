@@ -12,7 +12,7 @@ Here's a page that has some links.
 
 We have a [[Massive Wiki Manifesto]].
 
-We have [[links that are incipient]].
+We have [[links that are incipient]] (i.e., a link to MassiveWiki page that has not yet been created).
 
 You can make a link like this: `[[double square brackets]]` - for example, `[[Massive Wiki Roadmap]]`.
 

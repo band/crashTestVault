@@ -4,25 +4,29 @@ emails:
   - wlanderson@gmail.com
 full-name: William L Anderson
 organizations: 
-  - "Open Global Mind"
   - "Collective Sense Commons"
+  - "Open Global Mind"
   - "Cloud Appreciation Society"
 phones:
   - +1-512-693-7378
 short-name: Bill
 sortable-name: "Anderson, Bill"
-twitter: "@band -- deprecated"
+fediverse: "@band@octodon.social"
+discord: "anderbill"
+twitter (deprecated): "@band"
 urls: 
   - "https://about.me/wlanderson/"
 ---
 # Bill Anderson
 
 ## What about me?
-A retired data informatician (what does that mean?), sociotechnical (what? another big word?) computer systems engineer, and chemist. Also an open access advocate and inveterate punster.
+A retired data informatician (what does that mean?), sociotechnical computer systems engineer, and chemist. Also an open access advocate and inveterate punster.
 
-When asked recently about what I value and my interests I responded with "Kindness, curiosity, honesty, and humor. I am interested in learning about, examining, and promoting abundance-based models and ideas of sustainable human societies."
+When asked recently about what I value and my interests I said, with "Kindness, curiosity, honesty, and humor. I am interested in learning about, examining, and promoting abundance-based models and ideas of sustainable human societies."
 
 I am also reviewing my childhood first-order learnings about how the world works.
+
+Birth year atmospheric CO2 concentration [from ice core data](https://cdiac.ess-dive.lbl.gov/ftp/trends/co2/lawdome.combined.dat): 310.1 ppm
 
 ## Contact Me
 
@@ -32,7 +36,12 @@ Alternate email: wlanderson@gmail.com
 
 Phone | SMS: +1 512-693-7378
 
-Basic landing page (kinda old): https://about.me/wlanderson
+Initials: "WLA"
 
-Socials: <https://octodon.social/@band>
+Basic landing page: https://about.me/wlanderson
 
+Socials:  
+ - Mastodon: https://octodon.social/@band  
+ - Matrix: @anderbill:matrix.org  
+ - Discord: anderbill  
+ - Twitter (DEPRECATED): [@band](https://twitter.com/band)  
