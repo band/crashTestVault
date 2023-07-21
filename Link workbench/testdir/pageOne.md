@@ -2,7 +2,7 @@
 
 ## Image stuff
 
-an image: [[2021-11-11-Milosz.jpeg]]
+an image: ![[2021-11-11-Milosz.jpeg]]
 
 a page with the same filename stem: [[2021-11-11-Milosz]]
 
