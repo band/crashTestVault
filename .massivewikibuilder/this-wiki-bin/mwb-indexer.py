@@ -6,9 +6,8 @@ from pathlib import Path
 import shutil
 
 # set up logging
-import logging, sys
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+import logging
+logging.basicConfig(level=os.environ.get('LOGLEVEL', 'INFO').upper())
 
 # set up argparse
 import argparse
@@ -25,7 +24,7 @@ def main():
 
     wiki_root = str(args.wiki) + "/"
     index_folder = f"{wiki_root}" + str(args.folder)
-    print(index_folder)
+    logging.debug(f"index_folder: {index_folder}")
     filename=Path(f"{index_folder}").name + ".md"
     indexname=Path(f"{index_folder}").name + "-index.md"
     indexfile_pathname = index_folder + "/" + indexname
@@ -35,14 +34,13 @@ def main():
     
     mdfiles = [f for f in glob.glob(f"{index_folder}/**/*.md", recursive=True) \
                if Path(f).name != indexname]
-    sortedfiles = sorted(mdfiles, key=lambda x: os.path.getmtime(x), reverse=True)
     
-    # build the index file
-    #   first add index heading info
+    # build an index file
+    #   first add index heading info, if any
     if Path(f"{index_folder}/.indexHeading.md").exists():
        shutil.copyfile(f"{index_folder}/.indexHeading.md", indexfile_pathname)
 
-    for f in sortedfiles:
+    for f in sorted(mdfiles, key=lambda x: os.path.getmtime(x), reverse=True):
         with open(indexfile_pathname, "a") as file:
             file.write(" - [[" + Path(f).relative_to(wiki_root).stem + "]]  \n")
 
