@@ -19,3 +19,7 @@ node_modules
 # Massive Wiki Builder
 .massivewikibuilder/output/*
 .massivewikibuilder/output*/*
+
+# local Massive Wiki content
+# folder link index files
+*-index.md
