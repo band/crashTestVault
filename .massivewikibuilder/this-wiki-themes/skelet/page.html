@@ -1,0 +1,26 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>{% if title != 'README' %}{{title}} - {% endif %}{{wiki_title}}</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Skelet." property="Sēlekkt. Studio" content="https://selekkt.dk/skelet/">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="description" content="">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    
+    <link rel="stylesheet" href="/mwb-static/css/skelet.css"> <!-- include Skelet -->
+  <!-- <link rel="stylesheet" href="css/skelet-tooltips.css"> -->
+    <link rel="stylesheet" href="/mwb-static/css/app.css">  <!-- write all of your CSS styles here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <style></style>
+  </head>
+  <body>
+    {% include '_navbar.html' %}
+    <div>
+      {{ markdown_body }}
+    </div>
+    {% include '_footer.html' %}
+  </body>
+</html>
