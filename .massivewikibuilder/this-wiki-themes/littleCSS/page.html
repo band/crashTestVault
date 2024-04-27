@@ -1,0 +1,9 @@
+{% set page_title = title ~ ' - ' ~ wiki_title if title != 'README' else wiki_title %}{% include '_header.html' %}
+  <body>
+    {% include '_navbar.html' %}
+    <div>
+      {{ markdown_body }}
+    </div>
+    {% include '_footer.html' %}
+  </body>
+</html>
