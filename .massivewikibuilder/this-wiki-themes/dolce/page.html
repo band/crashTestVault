@@ -1,0 +1,34 @@
+{% set page_title = title ~ ' - ' ~ wiki_title if title != 'README' else wiki_title %}{% include '_header.html' %}
+<body>
+  <header class="sticky-header">
+      <div class="hamburger" onclick="toggleMenu('mainmenu')">&#9776;</div>
+      <img src="/mwb-static/siteicon.svg" alt="Site Icon">
+      <div class="site-name">{{ wiki_title }}</div>
+      <nav>
+          <a  href="/">Home</a>
+          <a  href="/all-pages.html">All Pages</a>
+          <a  href="#">Random Page</a>
+          <a  href="#">Search</a>
+      </nav>
+  </header>
+  <aside id="sidebar" class="sidebar">
+      <div class="collapsible" id="mainmenu">
+          <h2>Main Menu</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/all-pages.html">All Pages</a></li>
+            <li><a href="#">Random Page</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+      </div>
+  </aside>
+  <main id="main">
+    <div class="hamburger" id="contents-toggle">&#9776;</div>
+    <div>
+      {{ markdown_body }}
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
+  {% include '_footer.html' %}
+</body>
+</html>
