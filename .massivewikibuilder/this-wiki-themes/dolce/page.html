@@ -2,12 +2,12 @@
 <body>
   <header class="sticky-header">
       <div class="hamburger" onclick="toggleMenu('mainmenu')">&#9776;</div>
-      <div class="site-name">{{ wiki_title }}</div>
+      <div class="site-name" style="text-transform: uppercase;font-size: 2rem;">{{ wiki_title }}</div>
       <nav>
-          <a  href="/">Home</a>
-          <a  href="/all-pages.html">All Pages</a>
-          <a  href="#">Random Page</a>
-          <a  href="#">Search</a>
+          <a href="/">Home</a>
+          <a href="/all-pages.html" style="padding-left:7px;">All Pages</a>
+          <a href="#" style="padding-left:7px;">Random Page</a>
+          <a href="#" style="padding-left:7px;">Search</a>
       </nav>
   </header>
   <aside id="sidebar" class="sidebar">
@@ -23,9 +23,9 @@
   </aside>
   <main id="main">
     <div class="hamburger" id="contents-toggle">&#9776;</div>
-    <div>
-      {{ markdown_body }}
-    </div>
+      <article>
+	{{ markdown_body }}
+      </article>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
   {% include '_footer.html' %}
