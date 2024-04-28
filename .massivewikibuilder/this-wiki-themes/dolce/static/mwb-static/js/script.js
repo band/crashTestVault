@@ -1,31 +1,46 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Headroom for the sticky header
-    var header = document.querySelector('.header');
+    var header = document.querySelector('.sticky-header');
     var headroom = new Headroom(header);
     headroom.init();
 
-    // Close any open collapsible when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.collapsible') && !event.target.closest('.menu-icon')) {
-            hideAllMenus();
+    var sidebar = document.getElementById('sidebar');
+    var mainmenuToggle = document.getElementById('mainmenu-toggle');
+    var contentsToggle = document.getElementById('contents-toggle');
+
+    // Function to toggle display based on window width
+    function adjustSidebarDisplay() {
+        if (window.innerWidth > 768) {
+            sidebar.style.display = 'block'; // Show sidebar if window is wide
+        } else if (!sidebar.contains(document.activeElement)) {
+            sidebar.style.display = 'none'; // Hide sidebar if window is narrow
         }
-    });
-});
-
-function toggleMenu(menuId) {
-    var menu = document.getElementById(menuId);
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-    } else {
-        hideAllMenus();
-        menu.style.display = 'block';
     }
-}
 
-function hideAllMenus() {
-    var menus = document.querySelectorAll('.collapsible');
-    menus.forEach(function(menu) {
-        menu.style.display = 'none';
+    // Event listeners for toggles
+    mainmenuToggle.addEventListener('click', function() {
+        sidebar.style.display = (sidebar.style.display === 'block' ? 'none' : 'block');
     });
-}
+
+    contentsToggle.addEventListener('click', function() {
+        var contents = document.getElementById('contents');
+        contents.style.display = (contents.style.display === 'block' ? 'none' : 'block');
+    });
+
+    // Close menus when clicking outside
+    document.body.addEventListener('click', function(e) {
+        if (!e.target.matches('.hamburger, .collapsible')) {
+            document.querySelectorAll('.collapsible').forEach(function(element) {
+                element.style.display = 'none';
+            });
+            if (window.innerWidth <= 768) {
+                sidebar.style.display = 'none';
+            }
+        }
+    }, true);
+
+    // Adjust sidebar display on window resize
+    window.addEventListener('resize', adjustSidebarDisplay);
+
+    // Initial adjustment
+    adjustSidebarDisplay();
+});

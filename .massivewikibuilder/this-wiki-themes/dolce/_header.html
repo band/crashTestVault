@@ -5,32 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page_title }}</title>
-  <!-- FONT                                                                                            ––––––––––––––––––––––––––––––––––––––––––––––––––
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
-	rel="stylesheet" type="text/css">
-   -->
+  <!-- FONT                                                                                            ––––––––––––––––––––––––––––––––––––––––––––––––––  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+ -->
   <!-- CSS                                                                                             –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/mwb-static/css/styles.css">
-  <!--
-  <link rel="stylesheet" href="/mwb-static/css/littlecss.css">
   <link rel="stylesheet" href="/mwb-static/css/custom.css">
-  -->
   <link rel="stylesheet" href="/mwb-static/css/markdown.css">
-  <link rel="icon" href="siteicon.svg" type="image/svg+xml">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
   <script src="/mwb-static/js/script.js" defer></script>
-<!--
-    <link rel="stylesheet" href="/mwb-static/css/mystyles.css">
-    <link rel="stylesheet" href="/mwb-static/css/markdown.css">
-    <link rel="stylesheet" href="/mwb-static/css/sidebar.css">
-    <link rel="stylesheet" href="/mwb-static/css/custom.css">
--->
-    {% if lunr_index_sitepath != '' %}
+  {% if lunr_index_sitepath != '' %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
     <script src="{{lunr_index_sitepath}}"></script>
     <script>var index = lunr.Index.load(lunr_index)</script>
-    {% endif %}
-    {% if lunr_posts_sitepath != '' %}
+  {% endif %}
+  {% if lunr_posts_sitepath != '' %}
     <script src="{{lunr_posts_sitepath}}"></script>
-    {% endif %}
+  {% endif %}
   </head>

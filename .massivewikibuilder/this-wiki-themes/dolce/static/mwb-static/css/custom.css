@@ -1,0 +1,22 @@
+/* 2024-04-28: copied from
+  littleCSS V2.1.0
+  Copyright 2019, Kevin Nading
+  www.littlecss.com
+  Free to use under the MIT license.
+  http://www.opensource.org/licenses/mit-license.php
+  7/10/2019
+*/
+
+/* Base Styles */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout littleCSS
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html { font-size: 62.5%; }
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #636363;
+  background: #FEFEFE;  }
+
