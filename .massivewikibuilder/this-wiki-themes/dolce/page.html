@@ -10,7 +10,8 @@
           <a href="/search.html" style="padding-left:7px;">Search</a>
       </nav>
   </header>
-  <aside id="sidebar" class="sidebar">
+  <div class="flex-container">
+    <aside id="sidebar" class="side-column">
       <div class="collapsible" id="mainmenu">
           <h2>Main Menu</h2>
           <ul>
@@ -20,12 +21,17 @@
             <li><a href="/search.html">Search</a></li>
           </ul>
       </div>
-  </aside>
-  <main id="main">
-    <div class="hamburger" id="contents-toggle">&#9776;</div>
-	{{ markdown_body }}
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js"></script>
+    </aside>
+    <main id="main" class="main-column">
+<!--  <div class="hamburger" id="contents-toggle">&#9776;</div> -->
+      <article>
+        <div class="content markdown-body">
+          {{ markdown_body }}
+        </div>
+      </article>
+    </main>
+  </div>
+  <script src="/mwb-static/js/script.js"></script>
   {% include '_footer.html' %}
 </body>
 </html>
