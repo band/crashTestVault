@@ -42,6 +42,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* footer T&E */
+/* used to center the _footer <div> */
 .has-text-centered  {
     text-align: center !important; }
