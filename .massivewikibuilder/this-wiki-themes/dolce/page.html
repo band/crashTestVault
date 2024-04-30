@@ -4,10 +4,10 @@
       <div class="hamburger" onclick="toggleMenu('mainmenu')">&#9776;</div>
       <div class="site-name" style="text-transform: uppercase;font-size: 2rem;">{{ wiki_title }}</div>
       <nav>
-          <a href="/">Home</a>
-          <a href="/all-pages.html" style="padding-left:7px;">All Pages</a>
-          <a href="#" onclick="location.href=lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link" style="padding-left:7px;">Random Page</a>
-          <a href="/search.html" style="padding-left:7px;">Search</a>
+          <a class="navbar-link" href="/">Home</a>
+          <a class="navbar-link" href="/all-pages.html" style="padding-left:7px;">All Pages</a>
+          <a class="navbar-link" href="#" onclick="location.href=lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link" style="padding-left:7px;">Random Page</a>
+          <a class="navbar-link" href="/search.html" style="padding-left:7px;">Search</a>
       </nav>
   </header>
   <div class="flex-container">
