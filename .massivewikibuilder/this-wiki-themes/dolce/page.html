@@ -6,7 +6,7 @@
       <nav>
           <a href="/">Home</a>
           <a href="/all-pages.html" style="padding-left:7px;">All Pages</a>
-          <a href="#" style="padding-left:7px;">Random Page</a>
+          <a href="#" onclick="location.href=lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link" style="padding-left:7px;">Random Page</a>
           <a href="/search.html" style="padding-left:7px;">Search</a>
       </nav>
   </header>
@@ -23,7 +23,7 @@
       </div>
     </aside>
     <main id="main" class="main-column">
-<!--  <div class="hamburger" id="contents-toggle">&#9776;</div> -->
+    <div class="hamburger" id="contents-toggle">&#9776;</div>
       <article>
         <div class="content markdown-body">
           {{ markdown_body }}
