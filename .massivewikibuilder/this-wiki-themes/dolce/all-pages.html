@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>All Pages - {{wiki_title}}</title>
-  </head>
+{% set page_title = 'All Pages - ' ~ wiki_title %}{% include '_header.html' %}
   <body>
-    {% include '_navbar.html' %}
-    <div>
-      {% for page in pages %}
-      <p><a href="{{page.path}}">{{page.title}}</a></p>
-      {% endfor %}
+    {% include '_sticky_header.html' %}
+    <div class="flex-container">
+      <main class="main-column" id="main">
+        <div class="markdown-body">
+          {% for page in pages %}
+	    <p><a href="{{page.path}}">{{page.title}}</a></p>
+	  {% endfor %}
+        </div>
+      </main>
     </div>
     {% include '_footer.html' %}
+    <script>{% include '_javascript.html' %}</script>
   </body>
 </html>

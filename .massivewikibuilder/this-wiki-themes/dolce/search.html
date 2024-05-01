@@ -4,18 +4,8 @@
     li.item{list-style:none; padding:5px;}
     div#renderList{margin-top:1.5em;}
   </style>
-  <body class="has-navbar-fixed-top">
-    <header class="sticky-header">
-      <div class="hamburger" onclick="toggleMenu('mainmenu')">&#9776;</div>
-      <div class="site-name" style="text-transform: uppercase;font-size: 2rem;">{{ wiki_title }}</div>
-      <nav>
-          <a class="navbar-link" href="/">Home</a>
-          <a class="navbar-link" href="/all-pages.html" style="padding-left:7px;">All Pages</a>
-          <a class="navbar-link" href="#" onclick="location.href=lunr_posts[Math.floor(Math.random() * lunr_posts.length)].link" style="padding-left:7px;">Random Page</a>
-          <a class="navbar-link" href="/search.html" style="padding-left:7px;">Search</a>
-      </nav>
-    </header>
-
+<body class="has-navbar-fixed-top">
+  {% include '_sticky_header.html' %}
     <section class="section">
       <div class="container">
 	<div class="columns">
