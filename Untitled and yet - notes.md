@@ -13,6 +13,14 @@
  - figure out how to trigger building the contents file -- and --
  - put the code in place and test, test, test  
 
+### 2025-04-04:
+- implemented suggested Claude code changes; any difference?
+- seems to rewrite the index continuously; how to slow that down?  
+
+### 2025-04-05:
+-  Claude code is not worth the money; using Anthropic API seems to give better results.
+
+
 
 
 

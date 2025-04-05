@@ -5,3 +5,5 @@ First used to get used to using Obsidian with Windows10, and maybe more than tha
 Now a more general MassiveWiki and MassiveWikiBuilder test vault. (It will need to be hosted somewhere;-- maybe here on Github?)  
 
 Stay tuned.  
+
+hmmm ....
