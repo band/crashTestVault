@@ -2,9 +2,14 @@
 
 [[README|Home]]  
 
-## A wiki page of note
+## Wiki pages of note
 
-[[Massive Wiki Manifesto]]
+[[Massive Wiki Manifesto]]  
+
+[[dailyNotes/folderIndex|Daily Notes]]  
+
+[[plugin-devnotes/folderIndex|devNotes]]
+
 
 ## General Navigation
 
